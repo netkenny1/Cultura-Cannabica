@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cultura Cannabica — Mi cuenta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+
+    <header class="site-header">
+      <div class="topbar">
+        <div class="container topbar__content">
+          <p>Envío discreto 48-72h · Atención en tienda Madrid</p>
+          <div class="topbar__actions">
+            <a href="index.html#faq">FAQ</a>
+            <a href="index.html#contacto">Contacto</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav">
+        <div class="container nav__content">
+          <a class="nav__brand" href="index.html" aria-label="Cultura Cannabica">
+            <span class="nav__brand-logo">
+              <img
+                src="https://culturacannabica.es/wp-content/uploads/2023/06/Diseno-sin-titulo-96.png"
+                alt=""
+                loading="eager"
+              />
+            </span>
+            <span class="sr-only">Cultura Cannabica</span>
+          </a>
+
+          <button
+            class="nav__toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-nav"
+            data-nav-toggle
+          >
+            Menú
+          </button>
+
+          <nav class="nav__links" id="site-nav" data-nav>
+            <a href="shop.html">Tienda</a>
+            <a href="index.html#categorias">Categorías</a>
+            <a href="index.html#coleccion">Colección STV</a>
+            <a href="index.html#experiencia">Experiencia</a>
+            <a href="index.html#blog">Blog</a>
+            <a href="index.html#faq">FAQ</a>
+          </nav>
+
+          <div class="nav__actions">
+            <a class="ghost" href="shop.html">Buscar</a>
+            <a class="ghost" href="account.html">Mi cuenta</a>
+            <a class="primary" href="cart.html">Carrito · 1</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section auth">
+        <div class="container auth__grid">
+          <div>
+            <p class="eyebrow">Acceso seguro</p>
+            <h1>Gestión de cuenta simple y segura.</h1>
+            <p class="lead">
+              Protegemos tus datos con cifrado TLS, sesiones cortas y controles
+              antifraude. Recomendamos activar 2FA en el panel.
+            </p>
+            <ul class="auth__list">
+              <li>Verifica email en el primer acceso.</li>
+              <li>Contraseñas robustas y bloqueo por intentos fallidos.</li>
+              <li>Alertas de sesión y dispositivos nuevos.</li>
+            </ul>
+          </div>
+
+          <div class="auth__card" data-reveal>
+            <div class="tabs" data-auth-tabs>
+              <button class="tab is-active" data-auth-tab="login">
+                Iniciar sesión
+              </button>
+              <button class="tab" data-auth-tab="register">
+                Crear cuenta
+              </button>
+            </div>
+
+            <div class="tab-panels">
+              <form class="tab-panel is-active" data-auth-panel="login">
+                <label>
+                  Email
+                  <input type="email" autocomplete="email" required />
+                </label>
+                <label>
+                  Contraseña
+                  <input type="password" autocomplete="current-password" />
+                </label>
+                <button class="primary" type="submit">Entrar</button>
+                <button class="ghost" type="button">
+                  ¿Olvidaste tu contraseña?
+                </button>
+              </form>
+
+              <form class="tab-panel" data-auth-panel="register">
+                <label>
+                  Nombre completo
+                  <input type="text" autocomplete="name" required />
+                </label>
+                <label>
+                  Email
+                  <input type="email" autocomplete="email" required />
+                </label>
+                <label>
+                  Contraseña segura
+                  <input type="password" autocomplete="new-password" required />
+                </label>
+                <label class="terms">
+                  <input type="checkbox" required />
+                  Acepto los términos y condiciones
+                </label>
+                <button class="primary" type="submit">Crear cuenta</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <h3>Contacto</h3>
+          <p>Plaza de Cascorro 1, 28005, Madrid</p>
+          <p>+34 602 532 083</p>
+          <p>hola@culturacannabica.es</p>
+        </div>
+        <div>
+          <h3>Links</h3>
+          <p>Sobre nosotros</p>
+          <p>Términos y condiciones</p>
+          <p>Envíos y devoluciones</p>
+        </div>
+        <div>
+          <h3>Legal</h3>
+          <p>Uso ornamental o coleccionismo.</p>
+          <p>THC &lt; 0,02% según normativa vigente.</p>
+        </div>
+        <div class="footer__logo">
+          <span class="nav__brand-logo">
+            <img
+              src="https://culturacannabica.es/wp-content/uploads/2023/06/Diseno-sin-titulo-96.png"
+              alt="Cultura Cannabica"
+              loading="lazy"
+            />
+          </span>
+          <span>Cultura Cannabica © 2026</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cultura Cannabica — Premium CBD &amp; Grow Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>body{font-family:Inter,sans-serif;background:#faf9f7;color:#171717;margin:0}.container{max-width:1280px;margin:0 auto;padding:0 clamp(1.25rem,5vw,2.5rem)}</style>
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+
+    <!-- ===== HEADER ===== -->
+    <header class="site-header">
+      <div class="topbar">
+        <div class="container topbar__content">
+          <p>Envío discreto 48-72 h · Atención en tienda Madrid</p>
+          <div class="topbar__actions">
+            <a href="#faq">FAQ</a>
+            <a href="#contacto">Contacto</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav">
+        <div class="container nav__content">
+          <a class="nav__brand" href="index.html" aria-label="Cultura Cannabica">
+            <span class="nav__brand-logo">
+              <img
+                src="https://culturacannabica.es/wp-content/uploads/2023/06/Diseno-sin-titulo-96.png"
+                alt=""
+                loading="eager"
+              />
+            </span>
+            <span class="sr-only">Cultura Cannabica</span>
+          </a>
+
+          <button
+            class="nav__toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-nav"
+            data-nav-toggle
+          >
+            Menu
+          </button>
+
+          <nav class="nav__links" id="site-nav" data-nav>
+            <a href="shop.html">Tienda</a>
+            <a href="#categorias">Categorias</a>
+            <a href="#coleccion">Coleccion STV</a>
+            <a href="#experiencia">Experiencia</a>
+            <a href="#faq">FAQ</a>
+          </nav>
+
+          <div class="nav__actions">
+            <a class="ghost" href="shop.html">Buscar</a>
+            <a class="ghost" href="account.html">Mi cuenta</a>
+            <a class="primary" href="cart.html">Carrito &middot; 0</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== MAIN ===== -->
+    <main id="main">
+
+      <!-- ── Hero ── -->
+      <section class="hero">
+        <div class="container hero__grid">
+          <div class="hero__content" data-reveal>
+            <p class="eyebrow">Premium CBD &amp; Grow Shop</p>
+            <h1>Cultiva<br><em>Excelencia</em></h1>
+            <p class="lead">
+              Descubre flores CBD premium, extractos puros, semillas de genetica
+              top y equipamiento profesional de cultivo. Todo lo que necesitas en
+              un solo lugar.
+            </p>
+            <div class="hero__actions">
+              <a href="shop.html" class="primary large">Explorar Tienda</a>
+              <a href="#featured" class="ghost">Ver Destacados</a>
+            </div>
+            <div class="hero__stats">
+              <div>
+                <div class="hero__stat-number">500+</div>
+                <div class="hero__stat-label">Productos</div>
+              </div>
+              <div>
+                <div class="hero__stat-number">10K+</div>
+                <div class="hero__stat-label">Clientes</div>
+              </div>
+              <div>
+                <div class="hero__stat-number">24/7</div>
+                <div class="hero__stat-label">Soporte</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__visual" data-reveal>
+            <img
+              class="hero__image"
+              src="https://culturacannabica.es/wp-content/uploads/2025/10/Imagen-de-WhatsApp-2025-10-02-a-las-10.58.34_9b2d2278.jpg"
+              alt="Producto destacado Cultura Cannabica"
+            />
+            <div class="hero__image-badge">
+              <span class="dot"></span>
+              <span><strong>Nuevo</strong> &mdash; STV Amnesia 2 ml</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Marquee ── -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Premium Quality</span>
+          <span>Envio Discreto</span>
+          <span>Madrid</span>
+          <span>CBD Flowers</span>
+          <span>Seeds</span>
+          <span>Grow Equipment</span>
+          <span>Extractos</span>
+          <span>STV Collection</span>
+          <span>Premium Quality</span>
+          <span>Envio Discreto</span>
+          <span>Madrid</span>
+          <span>CBD Flowers</span>
+          <span>Seeds</span>
+          <span>Grow Equipment</span>
+          <span>Extractos</span>
+          <span>STV Collection</span>
+        </div>
+      </div>
+
+      <!-- ── Categories ── -->
+      <section class="section section--alt" id="categorias">
+        <div class="container">
+          <div class="section__header" data-reveal>
+            <p class="eyebrow">Comprar por Categoria</p>
+            <h2>Explora Nuestras Colecciones</h2>
+            <p>Encuentra exactamente lo que necesitas para tu viaje de cultivo.</p>
+          </div>
+
+          <div class="categories__grid" data-reveal-stagger>
+            <!-- CBD Flowers — feature card -->
+            <a href="shop.html?cat=cbd" class="category-card category-card--feature">
+              <div class="category-card__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 1 0 20 10 10 0 0 1 0-20z"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <h3 class="category-card__title">Flores CBD</h3>
+              <p class="category-card__description">Cepas indoor y outdoor de genetica premium con perfiles terpenicos unicos.</p>
+              <span class="category-card__link">Comprar ahora &rarr;</span>
+            </a>
+            <!-- STV -->
+            <a href="shop.html?cat=stv" class="category-card">
+              <div class="category-card__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2v20M2 12h20"/></svg>
+              </div>
+              <h3 class="category-card__title">STV Collection</h3>
+              <p class="category-card__description">Cartuchos y vapers de Sativanol.</p>
+              <span class="category-card__link">Comprar ahora &rarr;</span>
+            </a>
+            <!-- Extracts -->
+            <a href="shop.html?cat=extracts" class="category-card">
+              <div class="category-card__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              </div>
+              <h3 class="category-card__title">Extractos</h3>
+              <p class="category-card__description">Aceites puros y resinas premium.</p>
+              <span class="category-card__link">Comprar ahora &rarr;</span>
+            </a>
+            <!-- Seeds -->
+            <a href="shop.html?cat=seeds" class="category-card">
+              <div class="category-card__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20.9C5.2 19.7 4 17.5 4 15V9l8-4 8 4v6c0 2.5-1.2 4.7-3 5.9L12 24l-5-3.1z"/></svg>
+              </div>
+              <h3 class="category-card__title">Semillas</h3>
+              <p class="category-card__description">Geneticas premium y variedades top.</p>
+              <span class="category-card__link">Comprar ahora &rarr;</span>
+            </a>
+            <!-- Grow Equipment -->
+            <a href="shop.html?cat=grow" class="category-card">
+              <div class="category-card__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M3 9h18"/></svg>
+              </div>
+              <h3 class="category-card__title">Grow Equipment</h3>
+              <p class="category-card__description">Equipamiento profesional de cultivo.</p>
+              <span class="category-card__link">Comprar ahora &rarr;</span>
+            </a>
+            <!-- Accessories -->
+            <a href="shop.html?cat=accessories" class="category-card">
+              <div class="category-card__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+              </div>
+              <h3 class="category-card__title">Accesorios</h3>
+              <p class="category-card__description">Grinders, papeles, baterias y mas.</p>
+              <span class="category-card__link">Comprar ahora &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Featured Products ── -->
+      <section class="section" id="featured">
+        <div class="container">
+          <div class="section__header" data-reveal>
+            <div class="section__header-row">
+              <div>
+                <p class="eyebrow">Seleccion Destacada</p>
+                <h2>Los Mas Vendidos</h2>
+              </div>
+              <a href="shop.html" class="ghost">Ver todo &rarr;</a>
+            </div>
+          </div>
+
+          <div class="products__grid" data-reveal-stagger>
+            <!-- Product 1 -->
+            <article class="product-card">
+              <div class="product-card__image-wrapper">
+                <div class="product-card__image">
+                  <img src="https://culturacannabica.es/wp-content/uploads/2025/10/Imagen-de-WhatsApp-2025-10-02-a-las-10.58.34_9b2d2278.jpg" alt="Cartucho STV 2ml Amnesia" loading="lazy" />
+                </div>
+                <div class="product-card__overlay">
+                  <button class="product-card__quick-view">Vista Rapida</button>
+                </div>
+                <div class="product-card__badge">Nuevo</div>
+              </div>
+              <div class="product-card__content">
+                <div class="product-card__tag">STV &middot; 2 ml</div>
+                <h3 class="product-card__name">Cartucho Amnesia</h3>
+                <p class="product-card__meta">Sativa &middot; Citrico</p>
+                <div class="product-card__footer">
+                  <div>
+                    <span class="product-card__price-amount">&euro;50</span>
+                  </div>
+                  <a href="product.html" class="btn--icon" aria-label="Ver detalle">
+                    <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 2 -->
+            <article class="product-card">
+              <div class="product-card__image-wrapper">
+                <div class="product-card__image">
+                  <img src="https://culturacannabica.es/wp-content/uploads/2025/10/Imagen-de-WhatsApp-2025-10-02-a-las-10.58.34_08a88045.jpg" alt="STV Cookies" loading="lazy" />
+                </div>
+                <div class="product-card__overlay">
+                  <button class="product-card__quick-view">Vista Rapida</button>
+                </div>
+                <div class="product-card__badge product-card__badge--popular">Popular</div>
+              </div>
+              <div class="product-card__content">
+                <div class="product-card__tag">Vaper &middot; 2 ml</div>
+                <h3 class="product-card__name">STV Cookies</h3>
+                <p class="product-card__meta">Hibrido &middot; Dulce</p>
+                <div class="product-card__footer">
+                  <div>
+                    <span class="product-card__price-amount">&euro;60</span>
+                  </div>
+                  <a href="product.html" class="btn--icon" aria-label="Ver detalle">
+                    <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 3 -->
+            <article class="product-card">
+              <div class="product-card__image-wrapper">
+                <div class="product-card__image">
+                  <img src="https://culturacannabica.es/wp-content/uploads/2025/06/Cart-1ml-HHX-scaled.jpg" alt="Cartucho HHX Amnesia" loading="lazy" />
+                </div>
+                <div class="product-card__overlay">
+                  <button class="product-card__quick-view">Vista Rapida</button>
+                </div>
+              </div>
+              <div class="product-card__content">
+                <div class="product-card__tag">HHX &middot; 1 ml</div>
+                <h3 class="product-card__name">Cartucho Amnesia</h3>
+                <p class="product-card__meta">Sativa &middot; Energizante</p>
+                <div class="product-card__footer">
+                  <div>
+                    <span class="product-card__price-amount">&euro;25</span>
+                  </div>
+                  <a href="product.html" class="btn--icon" aria-label="Ver detalle">
+                    <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 4 -->
+            <article class="product-card">
+              <div class="product-card__image-wrapper">
+                <div class="product-card__image">
+                  <img src="https://culturacannabica.es/wp-content/uploads/2024/02/productos-cbd.jpg" alt="Amnesia Haze CBD" loading="lazy" />
+                </div>
+                <div class="product-card__overlay">
+                  <button class="product-card__quick-view">Vista Rapida</button>
+                </div>
+              </div>
+              <div class="product-card__content">
+                <div class="product-card__tag">CBD &middot; Flores</div>
+                <h3 class="product-card__name">Amnesia Haze CBD</h3>
+                <p class="product-card__meta">Indoor &middot; Citrico</p>
+                <div class="product-card__footer">
+                  <div>
+                    <span class="product-card__price-amount">&euro;25</span>
+                    <span class="product-card__price-unit">/ 5 g</span>
+                  </div>
+                  <a href="product.html" class="btn--icon" aria-label="Ver detalle">
+                    <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 5 -->
+            <article class="product-card">
+              <div class="product-card__image-wrapper">
+                <div class="product-card__image">
+                  <img src="https://culturacannabica.es/wp-content/uploads/2024/02/productos-hhc.jpg" alt="Gelato 41 CBD" loading="lazy" />
+                </div>
+                <div class="product-card__overlay">
+                  <button class="product-card__quick-view">Vista Rapida</button>
+                </div>
+                <div class="product-card__badge product-card__badge--chill">Chill Pick</div>
+              </div>
+              <div class="product-card__content">
+                <div class="product-card__tag">CBD &middot; Flores</div>
+                <h3 class="product-card__name">Gelato 41</h3>
+                <p class="product-card__meta">Hibrido &middot; Dulce</p>
+                <div class="product-card__footer">
+                  <div>
+                    <span class="product-card__price-amount">&euro;30</span>
+                    <span class="product-card__price-unit">/ 5 g</span>
+                  </div>
+                  <a href="product.html" class="btn--icon" aria-label="Ver detalle">
+                    <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 6 -->
+            <article class="product-card">
+              <div class="product-card__image-wrapper">
+                <div class="product-card__image">
+                  <img src="https://culturacannabica.es/wp-content/uploads/2024/02/productos-hhc.jpg" alt="Hash CBD Ketama" loading="lazy" />
+                </div>
+                <div class="product-card__overlay">
+                  <button class="product-card__quick-view">Vista Rapida</button>
+                </div>
+              </div>
+              <div class="product-card__content">
+                <div class="product-card__tag">Resinas</div>
+                <h3 class="product-card__name">Hash CBD Ketama</h3>
+                <p class="product-card__meta">Tradicional &middot; Terroso</p>
+                <div class="product-card__footer">
+                  <div>
+                    <span class="product-card__price-amount">&euro;20</span>
+                    <span class="product-card__price-unit">/ 5 g</span>
+                  </div>
+                  <a href="product.html" class="btn--icon" aria-label="Ver detalle">
+                    <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Spotlight — STV Collection ── -->
+      <section class="section spotlight" id="coleccion">
+        <div class="container spotlight__grid">
+          <div class="spotlight__image" data-reveal>
+            <img
+              src="https://culturacannabica.es/wp-content/uploads/2025/10/Imagen-de-WhatsApp-2025-10-02-a-las-10.58.34_08a88045.jpg"
+              alt="Coleccion STV Sativanol"
+              loading="lazy"
+            />
+          </div>
+          <div class="spotlight__content" data-reveal>
+            <p class="eyebrow">Coleccion Exclusiva</p>
+            <h2>Descubre<br>Sativanol</h2>
+            <p class="lead">
+              Nuestra linea STV ofrece una experiencia unica con extractos de
+              canamo organico de la mas alta pureza. Compatibles con baterias 510,
+              hasta 1.200 caladas por cartucho.
+            </p>
+            <div class="spotlight__tags">
+              <span class="spotlight__tag">STV 98%</span>
+              <span class="spotlight__tag">THC &lt; 0,02%</span>
+              <span class="spotlight__tag">Terpenos Naturales</span>
+            </div>
+            <a href="shop.html?cat=stv" class="primary large">Explorar Coleccion</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Trust / Values ── -->
+      <section class="section section--alt" id="experiencia">
+        <div class="container">
+          <div class="section__header" data-reveal>
+            <p class="eyebrow">Por Que Elegirnos</p>
+            <h2>La Experiencia Cultura Cannabica</h2>
+          </div>
+
+          <div class="trust__grid" data-reveal-stagger>
+            <div class="trust__card">
+              <div class="trust__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h3>Calidad Garantizada</h3>
+              <p>Todos nuestros productos pasan controles de laboratorio y cumplen normativa vigente.</p>
+            </div>
+            <div class="trust__card">
+              <div class="trust__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              </div>
+              <h3>Envio Discreto 48h</h3>
+              <p>Paqueteria anonima con seguimiento. Recogida gratuita en Madrid.</p>
+            </div>
+            <div class="trust__card">
+              <div class="trust__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </div>
+              <h3>Atencion Personal</h3>
+              <p>Equipo experto disponible para asesorarte en tienda y online.</p>
+            </div>
+            <div class="trust__card">
+              <div class="trust__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+              </div>
+              <h3>Catalogo Completo</h3>
+              <p>Mas de 500 productos entre flores, extractos, semillas y equipamiento.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Newsletter ── -->
+      <section class="section" id="contacto">
+        <div class="container">
+          <div class="newsletter__card" data-reveal>
+            <h2>Mantente al Dia</h2>
+            <p>
+              Recibe novedades, ofertas exclusivas y consejos de cultivo directamente en tu bandeja.
+            </p>
+            <form class="newsletter__form" onsubmit="return false">
+              <input type="email" placeholder="Tu email" required />
+              <button type="submit" class="primary">Suscribirse</button>
+            </form>
+            <p class="newsletter__privacy">
+              Respetamos tu privacidad. Cancela cuando quieras.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <h3>Contacto</h3>
+          <p>Plaza de Cascorro 1, 28005, Madrid</p>
+          <p>+34 602 532 083</p>
+          <p>hola@culturacannabica.es</p>
+        </div>
+        <div>
+          <h3>Tienda</h3>
+          <a href="shop.html?cat=cbd">Flores CBD</a><br />
+          <a href="shop.html?cat=stv">Coleccion STV</a><br />
+          <a href="shop.html?cat=extracts">Extractos</a><br />
+          <a href="shop.html?cat=seeds">Semillas</a>
+        </div>
+        <div>
+          <h3>Legal</h3>
+          <p>Uso ornamental o coleccionismo.</p>
+          <p>THC &lt; 0,02% segun normativa vigente.</p>
+          <a href="#">Politica de privacidad</a><br />
+          <a href="#">Terminos y condiciones</a>
+        </div>
+        <div class="footer__logo">
+          <span class="nav__brand-logo">
+            <img
+              src="https://culturacannabica.es/wp-content/uploads/2023/06/Diseno-sin-titulo-96.png"
+              alt="Cultura Cannabica"
+              loading="lazy"
+            />
+          </span>
+          <span>Cultura Cannabica &copy; 2026</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

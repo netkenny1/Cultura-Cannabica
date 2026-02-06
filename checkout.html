@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cultura Cannabica — Finalizar compra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+
+    <header class="site-header">
+      <div class="topbar">
+        <div class="container topbar__content">
+          <p>Envío discreto 48-72h · Atención en tienda Madrid</p>
+          <div class="topbar__actions">
+            <a href="index.html#faq">FAQ</a>
+            <a href="index.html#contacto">Contacto</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav">
+        <div class="container nav__content">
+          <a class="nav__brand" href="index.html" aria-label="Cultura Cannabica">
+            <span class="nav__brand-logo">
+              <img
+                src="https://culturacannabica.es/wp-content/uploads/2023/06/Diseno-sin-titulo-96.png"
+                alt=""
+                loading="eager"
+              />
+            </span>
+            <span class="sr-only">Cultura Cannabica</span>
+          </a>
+
+          <button
+            class="nav__toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-nav"
+            data-nav-toggle
+          >
+            Menú
+          </button>
+
+          <nav class="nav__links" id="site-nav" data-nav>
+            <a href="shop.html">Tienda</a>
+            <a href="index.html#categorias">Categorías</a>
+            <a href="index.html#coleccion">Colección STV</a>
+            <a href="index.html#experiencia">Experiencia</a>
+            <a href="index.html#blog">Blog</a>
+            <a href="index.html#faq">FAQ</a>
+          </nav>
+
+          <div class="nav__actions">
+            <a class="ghost" href="shop.html">Buscar</a>
+            <a class="ghost" href="account.html">Mi cuenta</a>
+            <a class="primary" href="cart.html">Carrito · 1</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section checkout">
+        <div class="container">
+          <div class="section__header">
+            <h2>Finalizar compra</h2>
+            <p>Completa tus datos para cerrar el pedido.</p>
+          </div>
+
+          <div class="checkout__notice" data-reveal>
+            <p>¿Tienes un cupón?</p>
+            <button class="ghost" type="button" data-coupon-toggle>
+              Introduce el código
+            </button>
+            <div class="checkout__coupon" data-coupon-panel hidden>
+              <input type="text" placeholder="Código de cupón" />
+              <button class="ghost" type="button">Aplicar cupón</button>
+            </div>
+          </div>
+
+          <div class="checkout__grid">
+            <form class="checkout__form" data-reveal>
+              <h3>Detalles de facturación</h3>
+              <div class="form-grid">
+                <label>
+                  Nombre *
+                  <input type="text" autocomplete="given-name" required />
+                </label>
+                <label>
+                  Apellidos *
+                  <input type="text" autocomplete="family-name" required />
+                </label>
+                <label>
+                  Nombre de la empresa (opcional)
+                  <input type="text" autocomplete="organization" />
+                </label>
+                <label>
+                  País / Región *
+                  <select required>
+                    <option>España</option>
+                  </select>
+                </label>
+                <label class="span-2">
+                  Dirección de la calle *
+                  <input
+                    type="text"
+                    placeholder="Nombre de la calle y número"
+                    autocomplete="address-line1"
+                    required
+                  />
+                </label>
+                <label class="span-2">
+                  Apartamento, habitación, escalera, etc. (opcional)
+                  <input
+                    type="text"
+                    placeholder="Apartamento, habitación, etc."
+                    autocomplete="address-line2"
+                  />
+                </label>
+                <label>
+                  Código postal / ZIP *
+                  <input type="text" inputmode="numeric" required />
+                </label>
+                <label>
+                  Población *
+                  <input type="text" autocomplete="address-level2" required />
+                </label>
+                <label>
+                  Provincia *
+                  <select required>
+                    <option>Madrid</option>
+                    <option>Barcelona</option>
+                    <option>Valencia</option>
+                  </select>
+                </label>
+                <label>
+                  Teléfono *
+                  <input type="tel" autocomplete="tel" required />
+                </label>
+                <label class="span-2">
+                  Dirección de correo electrónico *
+                  <input type="email" autocomplete="email" required />
+                </label>
+              </div>
+
+              <label class="form-toggle">
+                <input type="checkbox" checked data-shipping-toggle />
+                ¿Enviar a una dirección diferente?
+              </label>
+
+              <div class="form-grid" data-shipping-panel>
+                <label>
+                  Nombre *
+                  <input type="text" autocomplete="given-name" />
+                </label>
+                <label>
+                  Apellidos *
+                  <input type="text" autocomplete="family-name" />
+                </label>
+                <label>
+                  Nombre de la empresa (opcional)
+                  <input type="text" autocomplete="organization" />
+                </label>
+                <label>
+                  País / Región *
+                  <select>
+                    <option>España</option>
+                  </select>
+                </label>
+                <label class="span-2">
+                  Dirección de la calle *
+                  <input
+                    type="text"
+                    placeholder="Nombre de la calle y número"
+                    autocomplete="address-line1"
+                  />
+                </label>
+                <label class="span-2">
+                  Apartamento, habitación, escalera, etc. (opcional)
+                  <input
+                    type="text"
+                    placeholder="Apartamento, habitación, etc."
+                    autocomplete="address-line2"
+                  />
+                </label>
+                <label>
+                  Código postal / ZIP *
+                  <input type="text" inputmode="numeric" />
+                </label>
+                <label>
+                  Población *
+                  <input type="text" autocomplete="address-level2" />
+                </label>
+                <label>
+                  Provincia *
+                  <select>
+                    <option>Madrid</option>
+                    <option>Barcelona</option>
+                    <option>Valencia</option>
+                  </select>
+                </label>
+              </div>
+
+              <label class="span-2">
+                Notas del pedido (opcional)
+                <textarea
+                  rows="4"
+                  placeholder="Notas para la entrega"
+                ></textarea>
+              </label>
+            </form>
+
+            <aside
+              class="checkout__summary"
+              data-reveal
+              data-checkout-summary
+              data-subtotal="25.00"
+            >
+              <h3>Tu pedido</h3>
+              <div class="summary-item">
+                <span>Cartucho de HHX - 1ml - Amnesia × 1</span>
+                <span>€25.00</span>
+              </div>
+              <div class="summary-row">
+                <span>Subtotal</span>
+                <span>€25.00</span>
+              </div>
+              <div class="summary-row">
+                <span>Envío</span>
+                <div class="summary-shipping">
+                  <label>
+                    <input
+                      type="radio"
+                      name="checkout-shipping"
+                      value="4.99"
+                      checked
+                      data-shipping
+                    />
+                    Envío 24/48h (€4.99)
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="checkout-shipping"
+                      value="0"
+                      data-shipping
+                    />
+                    Recogida en tienda (Madrid)
+                  </label>
+                </div>
+              </div>
+              <div class="summary-row summary-total">
+                <span>Total</span>
+                <span data-checkout-total>€29.99</span>
+              </div>
+
+              <div class="payment">
+                <label>
+                  <input type="radio" name="payment" checked />
+                  Pago con tarjeta
+                  <span class="muted">Crédito o débito</span>
+                </label>
+                <label>
+                  <input type="radio" name="payment" />
+                  Transferencia bancaria directa
+                </label>
+              </div>
+
+              <label class="terms">
+                <input type="checkbox" required />
+                He leído y estoy de acuerdo con los
+                <a href="https://culturacannabica.es/term/">términos</a> *
+              </label>
+
+              <button class="primary" type="button" data-place-order>
+                Realizar el pedido
+              </button>
+              <p class="status" data-place-order-status hidden>
+                Acepta los términos para continuar.
+              </p>
+              <p class="muted">
+                Este sitio está protegido por reCAPTCHA ·
+                <a href="https://www.google.com/intl/es/policies/privacy/"
+                  >Privacidad</a
+                >
+                ·
+                <a href="https://www.google.com/intl/es/policies/terms/"
+                  >Términos</a
+                >
+              </p>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <h3>Contacto</h3>
+          <p>Plaza de Cascorro 1, 28005, Madrid</p>
+          <p>+34 602 532 083</p>
+          <p>hola@culturacannabica.es</p>
+        </div>
+        <div>
+          <h3>Links</h3>
+          <p>Sobre nosotros</p>
+          <p>Términos y condiciones</p>
+          <p>Envíos y devoluciones</p>
+        </div>
+        <div>
+          <h3>Legal</h3>
+          <p>Uso ornamental o coleccionismo.</p>
+          <p>THC &lt; 0,02% según normativa vigente.</p>
+        </div>
+        <div class="footer__logo">
+          <span class="nav__brand-logo">
+            <img
+              src="https://culturacannabica.es/wp-content/uploads/2023/06/Diseno-sin-titulo-96.png"
+              alt="Cultura Cannabica"
+              loading="lazy"
+            />
+          </span>
+          <span>Cultura Cannabica © 2026</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

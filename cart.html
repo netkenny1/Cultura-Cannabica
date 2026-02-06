@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cultura Cannabica — Carrito</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+
+    <header class="site-header">
+      <div class="topbar">
+        <div class="container topbar__content">
+          <p>Envío discreto 48-72h · Atención en tienda Madrid</p>
+          <div class="topbar__actions">
+            <a href="index.html#faq">FAQ</a>
+            <a href="index.html#contacto">Contacto</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav">
+        <div class="container nav__content">
+          <a class="nav__brand" href="index.html" aria-label="Cultura Cannabica">
+            <span class="nav__brand-logo">
+              <img
+                src="https://culturacannabica.es/wp-content/uploads/2023/06/Diseno-sin-titulo-96.png"
+                alt=""
+                loading="eager"
+              />
+            </span>
+            <span class="sr-only">Cultura Cannabica</span>
+          </a>
+
+          <button
+            class="nav__toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="site-nav"
+            data-nav-toggle
+          >
+            Menú
+          </button>
+
+          <nav class="nav__links" id="site-nav" data-nav>
+            <a href="shop.html">Tienda</a>
+            <a href="index.html#categorias">Categorías</a>
+            <a href="index.html#coleccion">Colección STV</a>
+            <a href="index.html#experiencia">Experiencia</a>
+            <a href="index.html#blog">Blog</a>
+            <a href="index.html#faq">FAQ</a>
+          </nav>
+
+          <div class="nav__actions">
+            <a class="ghost" href="shop.html">Buscar</a>
+            <a class="ghost" href="account.html">Mi cuenta</a>
+            <a class="primary" href="cart.html">Carrito · 1</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section cart">
+        <div class="container">
+          <div class="section__header">
+            <h2>Carro de compras</h2>
+            <p>Revisa tu pedido antes de finalizar la compra.</p>
+          </div>
+
+          <div class="cart__grid">
+            <div class="cart__table-card" data-reveal>
+              <table class="cart-table">
+                <thead>
+                  <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr data-cart-item data-price="25.00">
+                    <td class="cart-table__product">
+                      <img
+                        src="https://culturacannabica.es/wp-content/uploads/2025/06/Cart-1ml-HHX-scaled.jpg"
+                        alt="Cartucho de HHX – 1ml – Amnesia"
+                        loading="lazy"
+                      />
+                      <div>
+                        <p class="product-card__tag">HHX · 1ml</p>
+                        <h3>Cartucho Amnesia</h3>
+                      </div>
+                    </td>
+                    <td>€25.00</td>
+                    <td>
+                      <div class="qty" data-qty>
+                        <button class="qty__btn" data-qty-minus>-</button>
+                        <span class="qty__value" data-qty-value>1</span>
+                        <button class="qty__btn" data-qty-plus>+</button>
+                      </div>
+                    </td>
+                    <td class="cart-table__subtotal" data-subtotal>€25.00</td>
+                    <td>
+                      <button class="ghost cart-table__remove" data-remove>
+                        Quitar
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="cart__actions">
+                <div class="coupon">
+                  <input
+                    type="text"
+                    placeholder="Código de cupón"
+                    autocomplete="off"
+                  />
+                  <button class="ghost" type="button">Aplicar cupón</button>
+                </div>
+                <button class="ghost" type="button">Actualizar carrito</button>
+              </div>
+            </div>
+
+            <aside class="cart__summary" data-reveal>
+              <h3>Totales del carrito</h3>
+              <div class="summary-row">
+                <span>Subtotal</span>
+                <span data-cart-subtotal>€25.00</span>
+              </div>
+              <div class="summary-row">
+                <span>Envío</span>
+                <div class="summary-shipping">
+                  <label>
+                    <input
+                      type="radio"
+                      name="shipping"
+                      value="4.99"
+                      checked
+                      data-shipping
+                    />
+                    Envío 24/48h (€4.99)
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="shipping"
+                      value="0"
+                      data-shipping
+                    />
+                    Recogida en tienda (Madrid)
+                  </label>
+                </div>
+              </div>
+              <div class="summary-row summary-total">
+                <span>Total</span>
+                <span data-cart-total>€29.99</span>
+              </div>
+              <p class="muted">
+                Incluye IVA estimado. Envío calculado para Madrid.
+              </p>
+              <a class="primary" href="checkout.html">Finalizar compra</a>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <h3>Contacto</h3>
+          <p>Plaza de Cascorro 1, 28005, Madrid</p>
+          <p>+34 602 532 083</p>
+          <p>hola@culturacannabica.es</p>
+        </div>
+        <div>
+          <h3>Links</h3>
+          <p>Sobre nosotros</p>
+          <p>Términos y condiciones</p>
+          <p>Envíos y devoluciones</p>
+        </div>
+        <div>
+          <h3>Legal</h3>
+          <p>Uso ornamental o coleccionismo.</p>
+          <p>THC &lt; 0,02% según normativa vigente.</p>
+        </div>
+        <div class="footer__logo">
+          <span class="nav__brand-logo">
+            <img
+              src="https://culturacannabica.es/wp-content/uploads/2023/06/Diseno-sin-titulo-96.png"
+              alt="Cultura Cannabica"
+              loading="lazy"
+            />
+          </span>
+          <span>Cultura Cannabica © 2026</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
