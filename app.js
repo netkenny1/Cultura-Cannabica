@@ -6,6 +6,266 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------------------------------------------------------
+     0. LANGUAGE SWITCHER (i18n)
+     --------------------------------------------------------- */
+  const TRANSLATIONS = {
+    es: {
+      'topbar.msg':     'Envío discreto 48-72 h · Atención en tienda Madrid',
+      'topbar.contact': 'Contacto',
+      'nav.shop':       'Tienda',
+      'nav.categories': 'Categorias',
+      'nav.collection': 'Coleccion STV',
+      'nav.experience': 'Experiencia',
+      'nav.search':     'Buscar',
+      'nav.account':    'Mi cuenta',
+      'nav.cart':       'Carrito &middot; 0',
+      'hero.eyebrow':   'Premium CBD & Grow Shop',
+      'hero.title':     'Cultiva<br><em>Excelencia</em>',
+      'hero.lead':      'Descubre flores CBD premium, extractos puros, semillas de genetica top y equipamiento profesional de cultivo. Todo lo que necesitas en un solo lugar.',
+      'hero.cta':       'Explorar Tienda',
+      'hero.cta2':      'Ver Destacados',
+      'hero.stat1':     'Productos',
+      'hero.stat2':     'Clientes',
+      'hero.stat3':     'Soporte',
+      'hero.badge':     '<strong>Nuevo</strong> &mdash; STV Amnesia 2 ml',
+      'immersive.eyebrow': 'Experiencia Interactiva',
+      'immersive.title':   'Explora Nuestro<br>Universo',
+      'immersive.text':    'Una experiencia inmersiva que captura la esencia de Cultura Cannabica. Interactua con el modelo 3D arrastrando y explorando.',
+      'immersive.cta':     'Descubrir Mas',
+      'cat.eyebrow':       'Comprar por Categoria',
+      'cat.title':         'Explora Nuestras Colecciones',
+      'cat.subtitle':      'Encuentra exactamente lo que necesitas para tu viaje de cultivo.',
+      'cat.link':          'Comprar ahora &rarr;',
+      'cat.cbd':           'Flores CBD',
+      'cat.cbd_desc':      'Cepas indoor y outdoor de genetica premium con perfiles terpenicos unicos.',
+      'cat.stv':           'STV Collection',
+      'cat.stv_desc':      'Cartuchos y vapers de Sativanol.',
+      'cat.extracts':      'Extractos',
+      'cat.extracts_desc': 'Aceites puros y resinas premium.',
+      'cat.seeds':         'Semillas',
+      'cat.seeds_desc':    'Geneticas premium y variedades top.',
+      'cat.grow':          'Grow Equipment',
+      'cat.grow_desc':     'Equipamiento profesional de cultivo.',
+      'cat.accessories':      'Accesorios',
+      'cat.accessories_desc': 'Grinders, papeles, baterias y mas.',
+      'featured.eyebrow': 'Seleccion Destacada',
+      'featured.title':   'Los Mas Vendidos',
+      'featured.cta':     'Ver todo &rarr;',
+      'spot.eyebrow':     'Coleccion Exclusiva',
+      'spot.title':       'Descubre<br>Sativanol',
+      'spot.lead':        'Nuestra linea STV ofrece una experiencia unica con extractos de canamo organico de la mas alta pureza. Compatibles con baterias 510, hasta 1.200 caladas por cartucho.',
+      'spot.tag3':        'Terpenos Naturales',
+      'spot.cta':         'Explorar Coleccion',
+      'trust.eyebrow':    'Por Que Elegirnos',
+      'trust.title':      'La Experiencia Cultura Cannabica',
+      'trust.t1':         'Calidad Garantizada',
+      'trust.d1':         'Todos nuestros productos pasan controles de laboratorio y cumplen normativa vigente.',
+      'trust.t2':         'Envio Discreto 48h',
+      'trust.d2':         'Paqueteria anonima con seguimiento. Recogida gratuita en Madrid.',
+      'trust.t3':         'Atencion Personal',
+      'trust.d3':         'Equipo experto disponible para asesorarte en tienda y online.',
+      'trust.t4':         'Catalogo Completo',
+      'trust.d4':         'Mas de 500 productos entre flores, extractos, semillas y equipamiento.',
+      'news.title':       'Mantente al Dia',
+      'news.subtitle':    'Recibe novedades, ofertas exclusivas y consejos de cultivo directamente en tu bandeja.',
+      'news.placeholder': 'Tu email',
+      'news.cta':         'Suscribirse',
+      'news.privacy':     'Respetamos tu privacidad. Cancela cuando quieras.',
+      'footer.contact':   'Contacto',
+      'footer.shop':      'Tienda',
+      'footer.legal1':    'Uso ornamental o coleccionismo.',
+      'footer.legal2':    'THC &lt; 0,02% segun normativa vigente.',
+      'footer.privacy':   'Politica de privacidad',
+      'footer.terms':     'Terminos y condiciones',
+    },
+    ca: {
+      'topbar.msg':     'Enviament discret 48-72 h · Atenció a botiga Madrid',
+      'topbar.contact': 'Contacte',
+      'nav.shop':       'Botiga',
+      'nav.categories': 'Categories',
+      'nav.collection': 'Col·lecció STV',
+      'nav.experience': 'Experiència',
+      'nav.search':     'Cercar',
+      'nav.account':    'El meu compte',
+      'nav.cart':       'Cistella &middot; 0',
+      'hero.eyebrow':   'Premium CBD & Grow Shop',
+      'hero.title':     'Cultiva<br><em>Excel·lència</em>',
+      'hero.lead':      'Descobreix flors CBD premium, extractes purs, llavors de genètica top i equipament professional de cultiu. Tot el que necessites en un sol lloc.',
+      'hero.cta':       'Explorar Botiga',
+      'hero.cta2':      'Veure Destacats',
+      'hero.stat1':     'Productes',
+      'hero.stat2':     'Clients',
+      'hero.stat3':     'Suport',
+      'hero.badge':     '<strong>Nou</strong> &mdash; STV Amnesia 2 ml',
+      'immersive.eyebrow': 'Experiència Interactiva',
+      'immersive.title':   'Explora el Nostre<br>Univers',
+      'immersive.text':    'Una experiència immersiva que captura l\'essència de Cultura Cannabica. Interactua amb el model 3D arrossegant i explorant.',
+      'immersive.cta':     'Descobrir Més',
+      'cat.eyebrow':       'Comprar per Categoria',
+      'cat.title':         'Explora les Nostres Col·leccions',
+      'cat.subtitle':      'Troba exactament el que necessites per al teu viatge de cultiu.',
+      'cat.link':          'Comprar ara &rarr;',
+      'cat.cbd':           'Flors CBD',
+      'cat.cbd_desc':      'Varietats indoor i outdoor de genètica premium amb perfils terpènics únics.',
+      'cat.stv':           'Col·lecció STV',
+      'cat.stv_desc':      'Cartutxos i vapers de Sativanol.',
+      'cat.extracts':      'Extractes',
+      'cat.extracts_desc': 'Olis purs i resines premium.',
+      'cat.seeds':         'Llavors',
+      'cat.seeds_desc':    'Genètiques premium i varietats top.',
+      'cat.grow':          'Equipament de Cultiu',
+      'cat.grow_desc':     'Equipament professional de cultiu.',
+      'cat.accessories':      'Accessoris',
+      'cat.accessories_desc': 'Grinders, papers, bateries i més.',
+      'featured.eyebrow': 'Selecció Destacada',
+      'featured.title':   'Els Més Venuts',
+      'featured.cta':     'Veure tot &rarr;',
+      'spot.eyebrow':     'Col·lecció Exclusiva',
+      'spot.title':       'Descobreix<br>Sativanol',
+      'spot.lead':        'La nostra línia STV ofereix una experiència única amb extractes de cànem orgànic de la més alta puresa. Compatibles amb bateries 510, fins a 1.200 calades per cartutx.',
+      'spot.tag3':        'Terpens Naturals',
+      'spot.cta':         'Explorar Col·lecció',
+      'trust.eyebrow':    'Per Què Escollir-nos',
+      'trust.title':      'L\'Experiència Cultura Cannabica',
+      'trust.t1':         'Qualitat Garantida',
+      'trust.d1':         'Tots els nostres productes passen controls de laboratori i compleixen la normativa vigent.',
+      'trust.t2':         'Enviament Discret 48h',
+      'trust.d2':         'Paqueteria anònima amb seguiment. Recollida gratuïta a Madrid.',
+      'trust.t3':         'Atenció Personal',
+      'trust.d3':         'Equip expert disponible per assessorar-te a botiga i online.',
+      'trust.t4':         'Catàleg Complet',
+      'trust.d4':         'Més de 500 productes entre flors, extractes, llavors i equipament.',
+      'news.title':       'Mantén-te al Dia',
+      'news.subtitle':    'Rep novetats, ofertes exclusives i consells de cultiu directament a la teva bústia.',
+      'news.placeholder': 'El teu email',
+      'news.cta':         'Subscriure\'s',
+      'news.privacy':     'Respectem la teva privacitat. Cancel·la quan vulguis.',
+      'footer.contact':   'Contacte',
+      'footer.shop':      'Botiga',
+      'footer.legal1':    'Ús ornamental o col·leccionisme.',
+      'footer.legal2':    'THC &lt; 0,02% segons normativa vigent.',
+      'footer.privacy':   'Política de privacitat',
+      'footer.terms':     'Termes i condicions',
+    },
+    en: {
+      'topbar.msg':     'Discreet shipping 48-72h · In-store service Madrid',
+      'topbar.contact': 'Contact',
+      'nav.shop':       'Shop',
+      'nav.categories': 'Categories',
+      'nav.collection': 'STV Collection',
+      'nav.experience': 'Experience',
+      'nav.search':     'Search',
+      'nav.account':    'My Account',
+      'nav.cart':       'Cart &middot; 0',
+      'hero.eyebrow':   'Premium CBD & Grow Shop',
+      'hero.title':     'Cultivate<br><em>Excellence</em>',
+      'hero.lead':      'Discover premium CBD flowers, pure extracts, top-genetics seeds and professional grow equipment. Everything you need in one place.',
+      'hero.cta':       'Explore Shop',
+      'hero.cta2':      'View Featured',
+      'hero.stat1':     'Products',
+      'hero.stat2':     'Customers',
+      'hero.stat3':     'Support',
+      'hero.badge':     '<strong>New</strong> &mdash; STV Amnesia 2 ml',
+      'immersive.eyebrow': 'Interactive Experience',
+      'immersive.title':   'Explore Our<br>Universe',
+      'immersive.text':    'An immersive experience that captures the essence of Cultura Cannabica. Interact with the 3D model by dragging and exploring.',
+      'immersive.cta':     'Discover More',
+      'cat.eyebrow':       'Shop by Category',
+      'cat.title':         'Explore Our Collections',
+      'cat.subtitle':      'Find exactly what you need for your growing journey.',
+      'cat.link':          'Shop now &rarr;',
+      'cat.cbd':           'CBD Flowers',
+      'cat.cbd_desc':      'Indoor and outdoor strains of premium genetics with unique terpene profiles.',
+      'cat.stv':           'STV Collection',
+      'cat.stv_desc':      'Sativanol cartridges and vaporizers.',
+      'cat.extracts':      'Extracts',
+      'cat.extracts_desc': 'Pure oils and premium resins.',
+      'cat.seeds':         'Seeds',
+      'cat.seeds_desc':    'Premium genetics and top varieties.',
+      'cat.grow':          'Grow Equipment',
+      'cat.grow_desc':     'Professional growing equipment.',
+      'cat.accessories':      'Accessories',
+      'cat.accessories_desc': 'Grinders, papers, batteries and more.',
+      'featured.eyebrow': 'Featured Selection',
+      'featured.title':   'Best Sellers',
+      'featured.cta':     'View all &rarr;',
+      'spot.eyebrow':     'Exclusive Collection',
+      'spot.title':       'Discover<br>Sativanol',
+      'spot.lead':        'Our STV line offers a unique experience with organic hemp extracts of the highest purity. Compatible with 510 batteries, up to 1,200 puffs per cartridge.',
+      'spot.tag3':        'Natural Terpenes',
+      'spot.cta':         'Explore Collection',
+      'trust.eyebrow':    'Why Choose Us',
+      'trust.title':      'The Cultura Cannabica Experience',
+      'trust.t1':         'Guaranteed Quality',
+      'trust.d1':         'All our products pass laboratory controls and comply with current regulations.',
+      'trust.t2':         'Discreet Shipping 48h',
+      'trust.d2':         'Anonymous packaging with tracking. Free pickup in Madrid.',
+      'trust.t3':         'Personal Support',
+      'trust.d3':         'Expert team available to advise you in store and online.',
+      'trust.t4':         'Complete Catalog',
+      'trust.d4':         'Over 500 products including flowers, extracts, seeds and equipment.',
+      'news.title':       'Stay Up to Date',
+      'news.subtitle':    'Receive news, exclusive offers and growing tips directly in your inbox.',
+      'news.placeholder': 'Your email',
+      'news.cta':         'Subscribe',
+      'news.privacy':     'We respect your privacy. Cancel anytime.',
+      'footer.contact':   'Contact',
+      'footer.shop':      'Shop',
+      'footer.legal1':    'Ornamental or collectible use.',
+      'footer.legal2':    'THC &lt; 0.02% per current regulations.',
+      'footer.privacy':   'Privacy policy',
+      'footer.terms':     'Terms and conditions',
+    }
+  };
+
+  let currentLang = localStorage.getItem('cc-lang') || 'es';
+
+  function applyTranslations(lang) {
+    const t = TRANSLATIONS[lang];
+    if (!t) return;
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (t[key] !== undefined) el.textContent = t[key];
+    });
+
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n-html');
+      if (t[key] !== undefined) el.innerHTML = t[key];
+    });
+
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      if (t[key] !== undefined) el.placeholder = t[key];
+    });
+
+    document.documentElement.lang = lang === 'ca' ? 'ca' : lang === 'en' ? 'en' : 'es';
+  }
+
+  const langSwitcher = document.querySelector('[data-lang-switcher]');
+  if (langSwitcher) {
+    // Set initial state
+    langSwitcher.querySelectorAll('.lang-switcher__btn').forEach(btn => {
+      btn.classList.toggle('is-active', btn.dataset.lang === currentLang);
+    });
+    if (currentLang !== 'es') applyTranslations(currentLang);
+
+    langSwitcher.addEventListener('click', (e) => {
+      const btn = e.target.closest('.lang-switcher__btn');
+      if (!btn) return;
+      const lang = btn.dataset.lang;
+      if (lang === currentLang) return;
+
+      currentLang = lang;
+      localStorage.setItem('cc-lang', lang);
+      langSwitcher.querySelectorAll('.lang-switcher__btn').forEach(b => {
+        b.classList.toggle('is-active', b.dataset.lang === lang);
+      });
+      applyTranslations(lang);
+    });
+  }
+
+  /* ---------------------------------------------------------
      1. SCROLL REVEAL (IntersectionObserver)
      --------------------------------------------------------- */
   const revealEls = document.querySelectorAll('[data-reveal], [data-reveal-stagger]');

@@ -23,10 +23,15 @@
     <header class="site-header">
       <div class="topbar">
         <div class="container topbar__content">
-          <p>Envío discreto 48-72 h · Atención en tienda Madrid</p>
+          <p data-i18n="topbar.msg">Envío discreto 48-72 h · Atención en tienda Madrid</p>
           <div class="topbar__actions">
+            <div class="lang-switcher" data-lang-switcher>
+              <button class="lang-switcher__btn is-active" data-lang="es" aria-label="Español">ES</button>
+              <button class="lang-switcher__btn" data-lang="ca" aria-label="Català">CA</button>
+              <button class="lang-switcher__btn" data-lang="en" aria-label="English">EN</button>
+            </div>
             <a href="#faq">FAQ</a>
-            <a href="#contacto">Contacto</a>
+            <a href="#contacto" data-i18n="topbar.contact">Contacto</a>
           </div>
         </div>
       </div>
@@ -55,17 +60,17 @@
           </button>
 
           <nav class="nav__links" id="site-nav" data-nav>
-            <a href="shop.html">Tienda</a>
-            <a href="#categorias">Categorias</a>
-            <a href="#coleccion">Coleccion STV</a>
-            <a href="#experiencia">Experiencia</a>
+            <a href="shop.html" data-i18n="nav.shop">Tienda</a>
+            <a href="#categorias" data-i18n="nav.categories">Categorias</a>
+            <a href="#coleccion" data-i18n="nav.collection">Coleccion STV</a>
+            <a href="#experiencia" data-i18n="nav.experience">Experiencia</a>
             <a href="#faq">FAQ</a>
           </nav>
 
           <div class="nav__actions">
-            <a class="ghost" href="shop.html">Buscar</a>
-            <a class="ghost" href="account.html">Mi cuenta</a>
-            <a class="primary" href="cart.html">Carrito &middot; 0</a>
+            <a class="ghost" href="shop.html" data-i18n="nav.search">Buscar</a>
+            <a class="ghost" href="account.html" data-i18n="nav.account">Mi cuenta</a>
+            <a class="primary" href="cart.html" data-i18n-html="nav.cart">Carrito &middot; 0</a>
           </div>
         </div>
       </div>
@@ -78,29 +83,29 @@
       <section class="hero">
         <div class="container hero__grid">
           <div class="hero__content" data-reveal>
-            <p class="eyebrow">Premium CBD &amp; Grow Shop</p>
-            <h1>Cultiva<br><em>Excelencia</em></h1>
-            <p class="lead">
+            <p class="eyebrow" data-i18n="hero.eyebrow">Premium CBD &amp; Grow Shop</p>
+            <h1 data-i18n-html="hero.title">Cultiva<br><em>Excelencia</em></h1>
+            <p class="lead" data-i18n="hero.lead">
               Descubre flores CBD premium, extractos puros, semillas de genetica
               top y equipamiento profesional de cultivo. Todo lo que necesitas en
               un solo lugar.
             </p>
             <div class="hero__actions">
-              <a href="shop.html" class="primary large">Explorar Tienda</a>
-              <a href="#featured" class="ghost">Ver Destacados</a>
+              <a href="shop.html" class="primary large" data-i18n="hero.cta">Explorar Tienda</a>
+              <a href="#featured" class="ghost" data-i18n="hero.cta2">Ver Destacados</a>
             </div>
             <div class="hero__stats">
               <div>
                 <div class="hero__stat-number">500+</div>
-                <div class="hero__stat-label">Productos</div>
+                <div class="hero__stat-label" data-i18n="hero.stat1">Productos</div>
               </div>
               <div>
                 <div class="hero__stat-number">10K+</div>
-                <div class="hero__stat-label">Clientes</div>
+                <div class="hero__stat-label" data-i18n="hero.stat2">Clientes</div>
               </div>
               <div>
                 <div class="hero__stat-number">24/7</div>
-                <div class="hero__stat-label">Soporte</div>
+                <div class="hero__stat-label" data-i18n="hero.stat3">Soporte</div>
               </div>
             </div>
           </div>
@@ -113,7 +118,7 @@
             />
             <div class="hero__image-badge">
               <span class="dot"></span>
-              <span><strong>Nuevo</strong> &mdash; STV Amnesia 2 ml</span>
+              <span data-i18n-html="hero.badge"><strong>Nuevo</strong> &mdash; STV Amnesia 2 ml</span>
             </div>
           </div>
         </div>
@@ -160,13 +165,13 @@
 
             <div class="immersive__grid">
               <div class="immersive__content" data-reveal>
-                <p class="immersive__eyebrow">Experiencia Interactiva</p>
-                <h2>Explora Nuestro<br>Universo</h2>
-                <p class="immersive__text">
+                <p class="immersive__eyebrow" data-i18n="immersive.eyebrow">Experiencia Interactiva</p>
+                <h2 data-i18n-html="immersive.title">Explora Nuestro<br>Universo</h2>
+                <p class="immersive__text" data-i18n="immersive.text">
                   Una experiencia inmersiva que captura la esencia de Cultura Cannabica.
                   Interactua con el modelo 3D arrastrando y explorando.
                 </p>
-                <a href="shop.html" class="primary large immersive__cta">Descubrir Mas</a>
+                <a href="shop.html" class="primary large immersive__cta" data-i18n="immersive.cta">Descubrir Mas</a>
               </div>
               <div class="immersive__scene">
                 <spline-viewer url="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode" loading-anim-type="spinner-small-dark"></spline-viewer>
@@ -180,9 +185,9 @@
       <section class="section section--alt" id="categorias">
         <div class="container">
           <div class="section__header" data-reveal>
-            <p class="eyebrow">Comprar por Categoria</p>
-            <h2>Explora Nuestras Colecciones</h2>
-            <p>Encuentra exactamente lo que necesitas para tu viaje de cultivo.</p>
+            <p class="eyebrow" data-i18n="cat.eyebrow">Comprar por Categoria</p>
+            <h2 data-i18n="cat.title">Explora Nuestras Colecciones</h2>
+            <p data-i18n="cat.subtitle">Encuentra exactamente lo que necesitas para tu viaje de cultivo.</p>
           </div>
 
           <div class="categories__grid" data-reveal-stagger>
@@ -191,54 +196,54 @@
               <div class="category-card__icon">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 1 0 20 10 10 0 0 1 0-20z"/><path d="M12 6v6l4 2"/></svg>
               </div>
-              <h3 class="category-card__title">Flores CBD</h3>
-              <p class="category-card__description">Cepas indoor y outdoor de genetica premium con perfiles terpenicos unicos.</p>
-              <span class="category-card__link">Comprar ahora &rarr;</span>
+              <h3 class="category-card__title" data-i18n="cat.cbd">Flores CBD</h3>
+              <p class="category-card__description" data-i18n="cat.cbd_desc">Cepas indoor y outdoor de genetica premium con perfiles terpenicos unicos.</p>
+              <span class="category-card__link" data-i18n-html="cat.link">Comprar ahora &rarr;</span>
             </a>
             <!-- STV -->
             <a href="shop.html?cat=stv" class="category-card">
               <div class="category-card__icon">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2v20M2 12h20"/></svg>
               </div>
-              <h3 class="category-card__title">STV Collection</h3>
-              <p class="category-card__description">Cartuchos y vapers de Sativanol.</p>
-              <span class="category-card__link">Comprar ahora &rarr;</span>
+              <h3 class="category-card__title" data-i18n="cat.stv">STV Collection</h3>
+              <p class="category-card__description" data-i18n="cat.stv_desc">Cartuchos y vapers de Sativanol.</p>
+              <span class="category-card__link" data-i18n-html="cat.link">Comprar ahora &rarr;</span>
             </a>
             <!-- Extracts -->
             <a href="shop.html?cat=extracts" class="category-card">
               <div class="category-card__icon">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
               </div>
-              <h3 class="category-card__title">Extractos</h3>
-              <p class="category-card__description">Aceites puros y resinas premium.</p>
-              <span class="category-card__link">Comprar ahora &rarr;</span>
+              <h3 class="category-card__title" data-i18n="cat.extracts">Extractos</h3>
+              <p class="category-card__description" data-i18n="cat.extracts_desc">Aceites puros y resinas premium.</p>
+              <span class="category-card__link" data-i18n-html="cat.link">Comprar ahora &rarr;</span>
             </a>
             <!-- Seeds -->
             <a href="shop.html?cat=seeds" class="category-card">
               <div class="category-card__icon">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20.9C5.2 19.7 4 17.5 4 15V9l8-4 8 4v6c0 2.5-1.2 4.7-3 5.9L12 24l-5-3.1z"/></svg>
               </div>
-              <h3 class="category-card__title">Semillas</h3>
-              <p class="category-card__description">Geneticas premium y variedades top.</p>
-              <span class="category-card__link">Comprar ahora &rarr;</span>
+              <h3 class="category-card__title" data-i18n="cat.seeds">Semillas</h3>
+              <p class="category-card__description" data-i18n="cat.seeds_desc">Geneticas premium y variedades top.</p>
+              <span class="category-card__link" data-i18n-html="cat.link">Comprar ahora &rarr;</span>
             </a>
             <!-- Grow Equipment -->
             <a href="shop.html?cat=grow" class="category-card">
               <div class="category-card__icon">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M3 9h18"/></svg>
               </div>
-              <h3 class="category-card__title">Grow Equipment</h3>
-              <p class="category-card__description">Equipamiento profesional de cultivo.</p>
-              <span class="category-card__link">Comprar ahora &rarr;</span>
+              <h3 class="category-card__title" data-i18n="cat.grow">Grow Equipment</h3>
+              <p class="category-card__description" data-i18n="cat.grow_desc">Equipamiento profesional de cultivo.</p>
+              <span class="category-card__link" data-i18n-html="cat.link">Comprar ahora &rarr;</span>
             </a>
             <!-- Accessories -->
             <a href="shop.html?cat=accessories" class="category-card">
               <div class="category-card__icon">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
               </div>
-              <h3 class="category-card__title">Accesorios</h3>
-              <p class="category-card__description">Grinders, papeles, baterias y mas.</p>
-              <span class="category-card__link">Comprar ahora &rarr;</span>
+              <h3 class="category-card__title" data-i18n="cat.accessories">Accesorios</h3>
+              <p class="category-card__description" data-i18n="cat.accessories_desc">Grinders, papeles, baterias y mas.</p>
+              <span class="category-card__link" data-i18n-html="cat.link">Comprar ahora &rarr;</span>
             </a>
           </div>
         </div>
@@ -250,10 +255,10 @@
           <div class="section__header" data-reveal>
             <div class="section__header-row">
               <div>
-                <p class="eyebrow">Seleccion Destacada</p>
-                <h2>Los Mas Vendidos</h2>
+                <p class="eyebrow" data-i18n="featured.eyebrow">Seleccion Destacada</p>
+                <h2 data-i18n="featured.title">Los Mas Vendidos</h2>
               </div>
-              <a href="shop.html" class="ghost">Ver todo &rarr;</a>
+              <a href="shop.html" class="ghost" data-i18n-html="featured.cta">Ver todo &rarr;</a>
             </div>
           </div>
 
@@ -428,9 +433,9 @@
             />
           </div>
           <div class="spotlight__content" data-reveal>
-            <p class="eyebrow">Coleccion Exclusiva</p>
-            <h2>Descubre<br>Sativanol</h2>
-            <p class="lead">
+            <p class="eyebrow" data-i18n="spot.eyebrow">Coleccion Exclusiva</p>
+            <h2 data-i18n-html="spot.title">Descubre<br>Sativanol</h2>
+            <p class="lead" data-i18n="spot.lead">
               Nuestra linea STV ofrece una experiencia unica con extractos de
               canamo organico de la mas alta pureza. Compatibles con baterias 510,
               hasta 1.200 caladas por cartucho.
@@ -438,9 +443,9 @@
             <div class="spotlight__tags">
               <span class="spotlight__tag">STV 98%</span>
               <span class="spotlight__tag">THC &lt; 0,02%</span>
-              <span class="spotlight__tag">Terpenos Naturales</span>
+              <span class="spotlight__tag" data-i18n="spot.tag3">Terpenos Naturales</span>
             </div>
-            <a href="shop.html?cat=stv" class="primary large">Explorar Coleccion</a>
+            <a href="shop.html?cat=stv" class="primary large" data-i18n="spot.cta">Explorar Coleccion</a>
           </div>
         </div>
       </section>
@@ -449,8 +454,8 @@
       <section class="section section--alt" id="experiencia">
         <div class="container">
           <div class="section__header" data-reveal>
-            <p class="eyebrow">Por Que Elegirnos</p>
-            <h2>La Experiencia Cultura Cannabica</h2>
+            <p class="eyebrow" data-i18n="trust.eyebrow">Por Que Elegirnos</p>
+            <h2 data-i18n="trust.title">La Experiencia Cultura Cannabica</h2>
           </div>
 
           <div class="trust__grid" data-reveal-stagger>
@@ -458,29 +463,29 @@
               <div class="trust__icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
               </div>
-              <h3>Calidad Garantizada</h3>
-              <p>Todos nuestros productos pasan controles de laboratorio y cumplen normativa vigente.</p>
+              <h3 data-i18n="trust.t1">Calidad Garantizada</h3>
+              <p data-i18n="trust.d1">Todos nuestros productos pasan controles de laboratorio y cumplen normativa vigente.</p>
             </div>
             <div class="trust__card">
               <div class="trust__icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
               </div>
-              <h3>Envio Discreto 48h</h3>
-              <p>Paqueteria anonima con seguimiento. Recogida gratuita en Madrid.</p>
+              <h3 data-i18n="trust.t2">Envio Discreto 48h</h3>
+              <p data-i18n="trust.d2">Paqueteria anonima con seguimiento. Recogida gratuita en Madrid.</p>
             </div>
             <div class="trust__card">
               <div class="trust__icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
               </div>
-              <h3>Atencion Personal</h3>
-              <p>Equipo experto disponible para asesorarte en tienda y online.</p>
+              <h3 data-i18n="trust.t3">Atencion Personal</h3>
+              <p data-i18n="trust.d3">Equipo experto disponible para asesorarte en tienda y online.</p>
             </div>
             <div class="trust__card">
               <div class="trust__icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
               </div>
-              <h3>Catalogo Completo</h3>
-              <p>Mas de 500 productos entre flores, extractos, semillas y equipamiento.</p>
+              <h3 data-i18n="trust.t4">Catalogo Completo</h3>
+              <p data-i18n="trust.d4">Mas de 500 productos entre flores, extractos, semillas y equipamiento.</p>
             </div>
           </div>
         </div>
@@ -490,15 +495,15 @@
       <section class="section" id="contacto">
         <div class="container">
           <div class="newsletter__card" data-reveal>
-            <h2>Mantente al Dia</h2>
-            <p>
+            <h2 data-i18n="news.title">Mantente al Dia</h2>
+            <p data-i18n="news.subtitle">
               Recibe novedades, ofertas exclusivas y consejos de cultivo directamente en tu bandeja.
             </p>
             <form class="newsletter__form" onsubmit="return false">
-              <input type="email" placeholder="Tu email" required />
-              <button type="submit" class="primary">Suscribirse</button>
+              <input type="email" data-i18n-placeholder="news.placeholder" placeholder="Tu email" required />
+              <button type="submit" class="primary" data-i18n="news.cta">Suscribirse</button>
             </form>
-            <p class="newsletter__privacy">
+            <p class="newsletter__privacy" data-i18n="news.privacy">
               Respetamos tu privacidad. Cancela cuando quieras.
             </p>
           </div>
@@ -510,24 +515,24 @@
     <footer class="footer">
       <div class="container footer__grid">
         <div>
-          <h3>Contacto</h3>
+          <h3 data-i18n="footer.contact">Contacto</h3>
           <p>Plaza de Cascorro 1, 28005, Madrid</p>
           <p>+34 602 532 083</p>
           <p>hola@culturacannabica.es</p>
         </div>
         <div>
-          <h3>Tienda</h3>
-          <a href="shop.html?cat=cbd">Flores CBD</a><br />
-          <a href="shop.html?cat=stv">Coleccion STV</a><br />
-          <a href="shop.html?cat=extracts">Extractos</a><br />
-          <a href="shop.html?cat=seeds">Semillas</a>
+          <h3 data-i18n="footer.shop">Tienda</h3>
+          <a href="shop.html?cat=cbd" data-i18n="cat.cbd">Flores CBD</a><br />
+          <a href="shop.html?cat=stv" data-i18n="cat.stv">Coleccion STV</a><br />
+          <a href="shop.html?cat=extracts" data-i18n="cat.extracts">Extractos</a><br />
+          <a href="shop.html?cat=seeds" data-i18n="cat.seeds">Semillas</a>
         </div>
         <div>
           <h3>Legal</h3>
-          <p>Uso ornamental o coleccionismo.</p>
-          <p>THC &lt; 0,02% segun normativa vigente.</p>
-          <a href="#">Politica de privacidad</a><br />
-          <a href="#">Terminos y condiciones</a>
+          <p data-i18n="footer.legal1">Uso ornamental o coleccionismo.</p>
+          <p data-i18n-html="footer.legal2">THC &lt; 0,02% segun normativa vigente.</p>
+          <a href="#" data-i18n="footer.privacy">Politica de privacidad</a><br />
+          <a href="#" data-i18n="footer.terms">Terminos y condiciones</a>
         </div>
         <div class="footer__logo">
           <span class="nav__brand-logo">

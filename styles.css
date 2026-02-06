@@ -275,6 +275,36 @@ ul, ol { list-style: none; }
   color: white;
 }
 
+/* -- Language Switcher -- */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: rgba(255,255,255,.08);
+  border-radius: 4px;
+  padding: 2px;
+}
+
+.lang-switcher__btn {
+  padding: .2rem .45rem;
+  font-size: .68rem;
+  font-weight: 500;
+  letter-spacing: .06em;
+  color: rgba(255,255,255,.45);
+  border-radius: 3px;
+  transition: color var(--dur-fast), background var(--dur-fast);
+  line-height: 1;
+}
+
+.lang-switcher__btn:hover {
+  color: rgba(255,255,255,.8);
+}
+
+.lang-switcher__btn.is-active {
+  color: white;
+  background: rgba(255,255,255,.15);
+}
+
 /* ---------------------------------------------------------
    6. NAVIGATION — Fixed header with scroll-away
    --------------------------------------------------------- */
@@ -2528,6 +2558,14 @@ button.primary.large,
 
   .topbar__actions {
     display: none;
+  }
+
+  .topbar__content .lang-switcher {
+    display: flex;
+    position: absolute;
+    right: var(--container-px);
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   /* Hero */
