@@ -7,11 +7,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/styles.css" />
-    <style>body{font-family:Inter,sans-serif;background:#faf9f7;color:#171717;margin:0}.container{max-width:1280px;margin:0 auto;padding:0 clamp(1.25rem,5vw,2.5rem)}</style>
+    <style>body{font-family:'DM Sans',sans-serif;background:#faf9f7;color:#171717;margin:0}.container{max-width:1280px;margin:0 auto;padding:0 clamp(1.25rem,5vw,2.5rem)}</style>
   </head>
   <body>
     <div class="ambient ambient-one"></div>
@@ -140,6 +140,41 @@
           <span>STV Collection</span>
         </div>
       </div>
+
+      <!-- ── Immersive 3D Experience ── -->
+      <section class="section" id="experiencia-3d">
+        <div class="container">
+          <div class="immersive__card">
+            <svg class="immersive__spotlight animate-spotlight" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3787 2842" fill="none">
+              <g filter="url(#spotlight-filter)">
+                <ellipse cx="1924.71" cy="273.501" rx="1924.71" ry="273.501" transform="matrix(-0.822377 -0.568943 -0.568943 0.822377 3631.88 2291.09)" fill="white" fill-opacity="0.21"/>
+              </g>
+              <defs>
+                <filter id="spotlight-filter" x="0.860352" y="0.838989" width="3785.16" height="2840.26" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                  <feGaussianBlur stdDeviation="151" result="effect1_foregroundBlur"/>
+                </filter>
+              </defs>
+            </svg>
+
+            <div class="immersive__grid">
+              <div class="immersive__content" data-reveal>
+                <p class="immersive__eyebrow">Experiencia Interactiva</p>
+                <h2>Explora Nuestro<br>Universo</h2>
+                <p class="immersive__text">
+                  Una experiencia inmersiva que captura la esencia de Cultura Cannabica.
+                  Interactua con el modelo 3D arrastrando y explorando.
+                </p>
+                <a href="shop.html" class="primary large immersive__cta">Descubrir Mas</a>
+              </div>
+              <div class="immersive__scene">
+                <spline-viewer url="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode" loading-anim-type="spinner-small-dark"></spline-viewer>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- ── Categories ── -->
       <section class="section section--alt" id="categorias">
@@ -507,6 +542,7 @@
       </div>
     </footer>
 
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.28/build/spline-viewer.js"></script>
     <script src="./app.js"></script>
   </body>
 </html>
