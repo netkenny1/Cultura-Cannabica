@@ -1,0 +1,25 @@
+---
+description: Common patterns — repository, API response format
+alwaysApply: true
+---
+
+# Common Patterns
+
+## API Response Format
+
+Use a consistent envelope for API responses:
+
+- Success: `{ success: true, data?: T, meta?: { total, page, limit } }`
+- Error: `{ success: false, error: string }`
+- Include metadata for paginated responses.
+
+## Repository Pattern
+
+- Encapsulate data access behind a consistent interface.
+- Standard operations: findAll, findById, create, update, delete.
+- Business logic depends on the interface, not storage details.
+- Enables swapping data sources and testing with mocks.
+
+## Skeleton Projects
+
+When adding new functionality: prefer battle-tested patterns, evaluate options (security, extensibility, relevance), then iterate within a clear structure.

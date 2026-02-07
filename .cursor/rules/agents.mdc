@@ -1,0 +1,26 @@
+---
+description: When to use planner, code reviewer, security reviewer, architect
+alwaysApply: true
+---
+
+# Agent Orchestration
+
+## When to Use Which (Conceptual)
+
+| Situation | Use |
+|-----------|-----|
+| Complex feature or refactor | Planner / plan first |
+| Code just written or modified | Code reviewer (self-review or agent) |
+| Bug fix or new feature | TDD-style tests where relevant |
+| Architecture or API design | Architect perspective |
+| Auth, payments, secrets, new APIs | Security reviewer |
+| Dead code or cleanup | Refactor/cleaner |
+| Docs out of date | Doc updater |
+
+## Parallel Work
+
+For independent tasks, run them in parallel instead of strictly one-by-one (e.g. security pass + performance pass + type-check).
+
+## Multi-Perspective Review
+
+For complex or critical work, consider: factual correctness, code quality, security, consistency, redundancy.
