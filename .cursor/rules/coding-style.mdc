@@ -1,0 +1,40 @@
+---
+description: Core coding style — immutability, file size, error handling, input validation
+alwaysApply: true
+---
+
+# Coding Style
+
+## Immutability (Critical)
+
+- Create new objects/arrays; never mutate existing ones in place.
+- Use spread or new arrays: `{ ...obj, key: value }`, `[...arr, item]`, `arr.filter(...)`.
+- Avoid: `obj.key = value`, `arr.push(item)`.
+
+## File Organization
+
+- Prefer many small files over few large ones.
+- Target 200–400 lines per file; max ~800.
+- Organize by feature/domain (e.g. cart, product, checkout), not only by type.
+
+## Error Handling
+
+- Handle errors explicitly at every level.
+- User-facing: short, clear messages. Server/logs: full context.
+- Never silently swallow errors.
+
+## Input Validation
+
+- Validate at system boundaries (forms, query, API payloads).
+- Use schema-based validation where available.
+- Fail fast with clear error messages.
+- Never trust external data without validation.
+
+## Checklist Before Marking Complete
+
+- [ ] Code is readable and well-named
+- [ ] Functions are small (<50 lines where practical)
+- [ ] No deep nesting (>4 levels)
+- [ ] Proper error handling
+- [ ] No hardcoded secrets or sensitive values (use constants or config)
+- [ ] Immutable patterns used; no unintended mutation

@@ -1,0 +1,37 @@
+---
+description: JavaScript/TypeScript patterns — immutability, errors, API types
+globs: "**/*.js,**/*.ts,**/*.jsx,**/*.tsx"
+alwaysApply: false
+---
+
+# JavaScript/TypeScript Patterns
+
+## Immutability
+
+- Use spread for object/array updates: `{ ...user, name }`, `[...items, newItem]`.
+- Do not mutate: `user.name = x`, `items.push(x)`.
+
+## Error Handling
+
+- Use async/await with try/catch.
+- Log with context; throw or return user-friendly messages.
+
+## Input Validation
+
+- Prefer schema-based validation (e.g. Zod) at boundaries.
+- Validate before processing; fail fast.
+
+## API Response Type (TypeScript)
+
+```typescript
+interface ApiResponse<T> {
+  success: boolean
+  data?: T
+  error?: string
+  meta?: { total: number; page: number; limit: number }
+}
+```
+
+## Console
+
+- No `console.log` in production code; use a logging approach or strip in build.
