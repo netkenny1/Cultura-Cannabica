@@ -679,8 +679,8 @@ document.addEventListener('DOMContentLoaded', () => {
      --------------------------------------------------------- */
   const siteHeader = document.querySelector('.site-header');
   if (siteHeader) {
-    const SCROLL_THRESHOLD = 80;
-    const SCROLL_UP_THRESHOLD = 8;
+    const SCROLL_THRESHOLD = 140;
+    const SCROLL_DELTA_MIN = 8;
     let lastScrollY = window.scrollY;
     let ticking = false;
 
@@ -692,11 +692,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       siteHeader.classList.toggle('is-scrolled', y > 20);
 
-      if (pastThreshold && scrollingDown && scrollDelta > 2) {
-        document.body.classList.add('header-hidden');
+      if (pastThreshold && scrollingDown && scrollDelta > SCROLL_DELTA_MIN) {
         siteHeader.classList.add('site-header--hidden');
-      } else if (!scrollingDown || y <= SCROLL_THRESHOLD) {
-        document.body.classList.remove('header-hidden');
+      } else if (!scrollingDown && scrollDelta > SCROLL_DELTA_MIN || y <= SCROLL_THRESHOLD) {
         siteHeader.classList.remove('site-header--hidden');
       }
 
